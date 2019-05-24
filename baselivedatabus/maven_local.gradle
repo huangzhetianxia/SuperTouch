@@ -1,0 +1,9 @@
+apply plugin: 'maven'
+uploadArchives {
+    repositories.mavenDeployer {
+        pom.version = LOCAL_VERSION
+        pom.artifactId = LOCAL_ARTIFACTID
+        pom.groupId = LOCAL_GROUPID
+        repository(url: uri(LOCAL_URL))
+    }
+}
