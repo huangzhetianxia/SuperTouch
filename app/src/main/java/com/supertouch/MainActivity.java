@@ -15,6 +15,6 @@ public class MainActivity extends AppCompatActivity {
         ARouter.getInstance().build("/login/loginPage").navigation();
         finish();
 
-        // Hello
+        // Hello develop
     }
 }
