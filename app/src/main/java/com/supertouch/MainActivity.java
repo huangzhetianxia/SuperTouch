@@ -14,6 +14,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         ARouter.getInstance().build("/login/loginPage").navigation();
         finish();
-        // Hello develop other  other
+        // Hello
     }
 }
