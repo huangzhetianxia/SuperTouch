@@ -26,13 +26,13 @@ android {
         properties.load(inputStream)
 
         release {
-            storeFile file(properties.getProperty('key.file'))
+            storeFile file(properties.getProperty('storeFile'))
             keyAlias properties.getProperty('keyAlias')
             keyPassword properties.getProperty('keyPassword')
             storePassword properties.getProperty('storePassword')
         }
         debug {
-            storeFile file(properties.getProperty('key.file'))
+            storeFile file(properties.getProperty('storeFile'))
             keyAlias properties.getProperty('keyAlias')
             keyPassword properties.getProperty('keyPassword')
             storePassword properties.getProperty('storePassword')
@@ -59,6 +59,8 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
-    implementation 'com.supertouch.base:localbase:1.0.0'
-    implementation 'com.supertouch.loginregister:localloginregister:1.0.0'
+    //implementation 'com.supertouch.base:localbase:1.0.0'
+    //implementation 'com.supertouch.loginregister:localloginregister:1.0.0'
+    implementation project(':base')
+    implementation project(':loginregister')
 }
